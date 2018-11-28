@@ -1,0 +1,94 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+  box-sizing: border-box;
+
+-moz-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+}
+
+
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo {
+  flex-wrap: nowrap;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.photo:nth-child(2) {
+  display: none;
+}
+
+.photo:last-child {
+  display: none;
+}
+
+@media only screen and (min-width: 25em) {
+
+  body {
+    margin: 0;
+    background-color: green;
+  }
+
+  section {
+    display: block;
+    flex-wrap: wrap;
+    width: 33.3333%;
+    max-width: 100%;
+  }
+
+
+  img {
+    width: 100%;
+  }
+ }
+
+@media only screen and (min-width: 38em) {
+
+section {
+  display: flex;
+}
+  .photo {
+    width: 33.3333%;
+  }
+
+  .photo:nth-child(1) {
+    display: inline-block;
+    max-width: 50%;
+    width: 50%
+  }
+}
+
+@media only screen and (min-width: 60em) {
+
+  section {
+    display: inline-block;
+  }
+
+  .photo {
+    width: 66.6666%;
+  }
+}
