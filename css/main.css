@@ -24,13 +24,7 @@ body {
   padding: 0;
 }
 
-section {
-  display: flex;
-  flex-direction: column;
-}
-
 .photo {
-  flex-wrap: nowrap;
 }
 
 img {
@@ -50,37 +44,88 @@ img {
 
   body {
     margin: 0;
-    background-color: green;
   }
 
   section {
-    display: block;
+    display: flex;
     flex-wrap: wrap;
-    width: 33.3333%;
-    max-width: 100%;
   }
-
 
   img {
-    width: 100%;
+    background-color: yellow;
   }
+
+  .photo {
+    margin:0;
+    padding: 0;
+  }
+
+  .photo:first-child {
+  }
+
+  .photo:nth-child(2) {
+    display: inline-block;
+    max-width: 50%;
+    }
+
+  .photo:nth-child(3) {
+    max-width: 50%;
+  }
+
+  .photo:nth-child(4) {
+    max-width: 50%;
+  }
+
+  .photo:last-child {
+    display: inline-block;
+    max-width: 50%;
+  }
+
  }
 
 @media only screen and (min-width: 38em) {
 
-section {
-  display: flex;
-}
-  .photo {
-    width: 33.3333%;
+  body {
+    margin: 0;
+    background-color: green;
   }
 
-  .photo:nth-child(1) {
-    display: inline-block;
-    max-width: 50%;
-    width: 50%
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: darkgreen;
   }
-}
+
+  img {
+    background-color: yellow;
+  }
+
+  .photo {
+    margin:0;
+    padding: 0;
+  }
+
+  .photo:first-child {
+  }
+
+  .photo:nth-child(2) {
+    display: inline-block;
+    max-width: 33.3333%;
+    }
+
+  .photo:nth-child(3) {
+    max-width: 33.3333%;
+  }
+
+  .photo:nth-child(4) {
+    max-width: 33.3333%;
+  }
+
+  .photo:last-child {
+    display: none;
+  }
+
+ }
 
 @media only screen and (min-width: 60em) {
 
